@@ -1,7 +1,11 @@
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+
 export default function HomePage() {
     return (
         <main>
-            <h1>Elite Valet</h1>
+            <Navbar />
+            <Hero />
         </main>
     );
 }
