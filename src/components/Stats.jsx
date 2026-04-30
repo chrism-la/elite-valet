@@ -13,7 +13,7 @@ const stats = [
 
 export default function Stats() {
     return (
-        <section className="bg-[#0B0B0F] px-6 md:px-16 py-24 md:py-32">
+        <section className="bg-[#0B0B0F] px-6 md:px-16 py-20 md:py-24">
             <div className="max-w-6xl mx-auto">
                 {/* HEADER */}
                 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: 'easeOut' }} className="mb-20 max-w-3xl">

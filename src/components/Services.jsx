@@ -35,10 +35,10 @@ export default function Services() {
     const textY = useTransform(scrollYProgress, [0.2, 0.8], [15, -15]);
 
     return (
-        <section ref={sectionRef} className="bg-[#0B0B0F] px-6 md:px-16 py-24 md:py-32">
+        <section ref={sectionRef} className="bg-[#0B0B0F] px-6 md:px-16 pt-20 pb-12 md:pt-28 md:pb-16">
             <div className="max-w-6xl mx-auto">
                 {/* HEADER */}
-                <motion.div style={{ y: headerY, opacity: headerOpacity, scale: headerScale }} className="mb-16 md:mb-20 max-w-4xl">
+                <motion.div style={{ y: headerY, opacity: headerOpacity, scale: headerScale }} className="mb-12 md:mb-16 max-w-4xl">
                     <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Our Services</p>
                     <div className="w-12 h-px bg-[#C9A227]/60 mb-6" />
 
@@ -83,7 +83,7 @@ export default function Services() {
                                 <motion.div style={{ y: textY }}>
                                     <h3 className="text-white text-xl font-light mb-4">{service.title}</h3>
 
-                                    <p className="text-white/55 text-sm leading-relaxed max-w-xs">{service.text}</p>
+                                    <p className="text-white/60 text-[15px] md:text-sm leading-relaxed max-w-xs">{service.text}</p>
                                 </motion.div>
                             </motion.div>
                         );

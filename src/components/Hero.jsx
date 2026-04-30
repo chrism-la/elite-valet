@@ -43,7 +43,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.8, ease: 'easeOut' }}
                 style={{ opacity: scrollIndicatorOpacity }}
-                className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 text-white/60"
+                className="absolute bottom-12 md:bottom-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 text-white/60 md:hidden"
             >
                 <p className="text-xs tracking-[0.35em] uppercase">Scroll</p>
 

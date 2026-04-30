@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Stats from '@/components/Stats';
 import Experience from '@/components/Experience';
+import CTA from '@/components/CTA';
 
 export default function HomePage() {
     return (
@@ -12,6 +13,7 @@ export default function HomePage() {
             <Services />
             <Stats />
             <Experience />
+            <CTA />
         </main>
     );
 }
