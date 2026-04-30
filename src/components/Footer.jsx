@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
     return (
@@ -39,12 +40,19 @@ export default function Footer() {
 
                         <div className="flex flex-col gap-3">
                             <p className="text-white text-sm tracking-wide mb-2">Social</p>
-                            <a href="#" className="text-white/50 hover:text-white transition">
-                                Instagram
-                            </a>
-                            <a href="#" className="text-white/50 hover:text-white transition">
-                                Facebook
-                            </a>
+
+                            <div className="flex gap-4">
+                                <a href="#" className="text-white/50 hover:text-white transition">
+                                    <FaInstagram className="w-5 h-5" />
+                                </a>
+
+                                <a href="#" className="text-white/50 hover:text-white transition">
+                                    <FaFacebook className="w-5 h-5" />
+                                </a>
+                                <a href="#" className="text-white/50 hover:text-white ">
+                                    <FaLinkedin className="w-5 h-5" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

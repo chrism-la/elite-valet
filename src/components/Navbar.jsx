@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -91,15 +92,26 @@ export default function Navbar() {
                             </div>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-10 pt-6 border-t border-white/10">
-                                <p className="text-white/40 text-xs tracking-[0.3em] uppercase">Request</p>
-
                                 <a
                                     href="mailto:yourbusiness@email.com"
-                                    className="hidden md:block rounded-full px-6 py-2.5 text-sm tracking-wide text-black bg-linear-to-r from-[#C9A227] via-[#E6C75A] to-[#C9A227] shadow-[0_0_20px_rgba(201,162,39,0.25)] hover:scale-[1.03] active:scale-[0.98] transition"
+                                    className="inline-block mt-4 rounded-full px-6 py-2.5 text-sm tracking-wide text-black bg-linear-to-r from-[#C9A227] via-[#E6C75A] to-[#C9A227] shadow-[0_0_20px_rgba(201,162,39,0.25)] hover:scale-[1.03] active:scale-[0.98] transition"
                                 >
                                     Book Valet
                                 </a>
                             </motion.div>
+
+                            <div className="mt-8 flex gap-5">
+                                <a href="#" className="text-white/50 hover:text-white">
+                                    <FaInstagram className="w-8 h-8" />
+                                </a>
+
+                                <a href="#" className="text-white/50 hover:text-white">
+                                    <FaFacebook className="w-8 h-8" />
+                                </a>
+                                <a href="#" className="text-white/50 hover:text-white ">
+                                    <FaLinkedin className="w-8 h-8" />
+                                </a>
+                            </div>
                         </motion.div>
                     </motion.div>
                 )}

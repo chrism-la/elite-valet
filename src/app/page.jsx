@@ -4,6 +4,7 @@ import Services from '@/components/Services';
 import Stats from '@/components/Stats';
 import Experience from '@/components/Experience';
 import CTA from '@/components/CTA';
+import Footer from '@/components/Footer';
 
 export default function HomePage() {
     return (
@@ -14,6 +15,7 @@ export default function HomePage() {
             <Stats />
             <Experience />
             <CTA />
+            <Footer />
         </main>
     );
 }
