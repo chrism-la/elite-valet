@@ -8,6 +8,7 @@ export default function Hero() {
     const y = useTransform(scrollY, [0, 500], [0, 80]);
     const opacity = useTransform(scrollY, [0, 250], [1, 0]);
     const textY = useTransform(scrollY, [0, 400], [0, 40]);
+    const scrollIndicatorOpacity = useTransform(scrollY, [0, 120], [1, 0]);
 
     return (
         <div className="h-screen w-full relative overflow-hidden flex items-end">
@@ -23,7 +24,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/30 to-black/10" />
 
             {/* CONTENT */}
-            <motion.div style={{ y, opacity }} className="relative w-full px-6 md:px-16 pb-24 md:pb-20">
+            <motion.div style={{ y, opacity }} className="relative w-full px-6 md:px-16 pb-32 md:pb-20">
                 <motion.div style={{ y: textY }} className="max-w-xl">
                     <motion.p
                         initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
@@ -35,6 +36,18 @@ export default function Hero() {
                         <span className="italic text-[#C9A227] drop-shadow-[0_0_16px_rgba(201,162,39,0.4)]">professionalism</span>.
                     </motion.p>
                 </motion.div>
+            </motion.div>
+            {/* SCROLL INDICATOR */}
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2, duration: 0.8, ease: 'easeOut' }}
+                style={{ opacity: scrollIndicatorOpacity }}
+                className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 text-white/60"
+            >
+                <p className="text-xs tracking-[0.35em] uppercase">Scroll</p>
+
+                <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }} className="w-0.5 h-10 bg-white/40 rounded-full" />
             </motion.div>
         </div>
     );

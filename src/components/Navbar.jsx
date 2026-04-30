@@ -24,9 +24,9 @@ export default function Navbar() {
         <div className="fixed top-0 w-full z-50">
             <motion.div
                 animate={{
-                    backgroundColor: scrolled ? 'rgba(0,0,0,0.35)' : 'rgba(255,255,255,0.05)',
-                    backdropFilter: scrolled ? 'blur(24px)' : 'blur(12px)',
-                    borderColor: scrolled ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.10)',
+                    backgroundColor: 'rgba(255,255,255,0.05)',
+                    backdropFilter: 'blur(20px)',
+                    borderColor: 'rgba(255,255,255,0.10)',
                 }}
                 transition={{ duration: 0.4 }}
                 className="w-full border-b px-6 md:px-16 py-5 flex justify-between items-center shadow-lg shadow-black/20"
