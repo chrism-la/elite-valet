@@ -31,15 +31,15 @@ export default function Services() {
     const cardsOpacity = useTransform(scrollYProgress, [0.15, 0.45], [0, 1]);
 
     // Parallax depth (≈30px difference)
-    const iconY = useTransform(scrollYProgress, [0.1, 1], [40, -30]);
-    const textY = useTransform(scrollYProgress, [0.2, 0.8], [5, -5]);
+    const iconY = useTransform(scrollYProgress, [0.1, 1], [30, -30]);
+    const textY = useTransform(scrollYProgress, [0.2, 0.8], [15, -15]);
 
     return (
         <section ref={sectionRef} className="bg-[#0B0B0F] px-6 md:px-16 py-24 md:py-32">
             <div className="max-w-6xl mx-auto">
                 {/* HEADER */}
                 <motion.div style={{ y: headerY, opacity: headerOpacity, scale: headerScale }} className="mb-16 md:mb-20 max-w-4xl">
-                    <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Valet Services</p>
+                    <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Our Services</p>
                     <div className="w-12 h-px bg-[#C9A227]/60 mb-6" />
 
                     <h2 className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight">Parking service shaped around the guest experience.</h2>
@@ -48,8 +48,6 @@ export default function Services() {
                         From private events to hospitality venues, our team brings a polished, organized, and discreet arrival experience.
                     </p>
                 </motion.div>
-
-                {/* CARDS */}
                 {/* CARDS */}
                 <motion.div style={{ y: cardsY, opacity: cardsOpacity }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
                     {services.map((service, index) => {
