@@ -28,7 +28,7 @@ export default function AboutStory() {
                     className="md:col-span-6 md:col-start-7 space-y-8 text-white/55 text-[15px] md:text-base leading-relaxed"
                 >
                     <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                        Founded in 2013, Elite Car Valet has provided premium valet service across Los Angeles County, including Beverly Hills, Studio City, Hollywood, Sunset Plaza, and Burbank.
+                        Founded in 2013, Elite Car Valet has provided premium valet service across the Los Angeles County, including Beverly Hills, Studio City, Hollywood, Sunset Plaza, and Burbank.
                     </motion.p>
 
                     <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.45 }}>
