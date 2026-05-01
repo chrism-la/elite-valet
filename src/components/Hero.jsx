@@ -1,10 +1,25 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useState, useRef } from 'react';
+import { Volume2, VolumeX } from 'lucide-react';
 
 export default function Hero() {
     const { scrollY } = useScroll();
+    const [muted, setMuted] = useState(true);
+    const videoRef = useRef(null);
 
+    const toggleSound = () => {
+        if (!videoRef.current) return;
+
+        const nextMuted = !muted;
+        videoRef.current.muted = nextMuted;
+        setMuted(nextMuted);
+
+        if (!nextMuted) {
+            videoRef.current.play();
+        }
+    };
     const y = useTransform(scrollY, [0, 500], [0, 80]);
     const opacity = useTransform(scrollY, [0, 250], [1, 0]);
     const textY = useTransform(scrollY, [0, 400], [0, 40]);
@@ -14,7 +29,7 @@ export default function Hero() {
         <div className="h-screen w-full relative overflow-hidden flex items-end">
             {/* VIDEO */}
             <motion.div initial={{ opacity: 0, filter: 'blur(14px)' }} animate={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 1.6 }} className="absolute inset-0 w-full h-full">
-                <video className="w-full h-full object-cover scale-[1.05]" autoPlay muted loop playsInline>
+                <video ref={videoRef} className="w-full h-full object-cover scale-[1.05]" autoPlay muted={muted} loop playsInline preload="auto" poster="/hero-poster.jpg">
                     <source src="/hero.mp4" type="video/mp4" />
                 </video>
             </motion.div>
@@ -25,7 +40,7 @@ export default function Hero() {
 
             {/* CONTENT */}
             <motion.div style={{ y, opacity }} className="relative w-full px-6 md:px-16 pb-32 md:pb-20">
-                <motion.div style={{ y: textY }} className="max-w-xl">
+                <motion.div style={{ y: textY }} className="max-w-xl relative">
                     <motion.p
                         initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
                         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -35,6 +50,12 @@ export default function Hero() {
                         Luxury valet parking designed for private events, hotels, and high-profile venues — executed with{' '}
                         <span className="italic text-[#C9A227] drop-shadow-[0_0_16px_rgba(201,162,39,0.4)]">professionalism</span>.
                     </motion.p>
+                    <button
+                        onClick={toggleSound}
+                        className="absolute right-0 top-full mt-4 z-30 w-10 h-10 rounded-full border border-white/20 bg-black/30 backdrop-blur-md flex items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition md:hidden"
+                    >
+                        {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                    </button>
                 </motion.div>
             </motion.div>
             {/* SCROLL INDICATOR */}
@@ -49,6 +70,12 @@ export default function Hero() {
 
                 <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }} className="w-0.5 h-10 bg-white/40 rounded-full" />
             </motion.div>
+            <button
+                onClick={toggleSound}
+                className="hidden md:flex absolute bottom-6 right-6 z-30 w-10 h-10 rounded-full border border-white/20 bg-black/30 backdrop-blur-md items-center justify-center text-white/70 hover:text-white hover:bg-white/10 transition"
+            >
+                {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+            </button>
         </div>
     );
 }
