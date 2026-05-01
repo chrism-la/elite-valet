@@ -4,16 +4,19 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { ChevronDown } from 'lucide-react';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [open, setOpen] = useState(false);
+    const [areasOpen, setAreasOpen] = useState(false);
 
     const links = [
         { name: 'About', href: '/about' },
         { name: 'Service Areas', href: '/service-areas' },
         { name: 'Contact', href: '/about#contact' },
     ];
+    const serviceAreas = ['Beverly Hills', 'Studio City', 'Hollywood', 'Sunset Plaza', 'Burbank', 'Los Angeles County'];
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -37,12 +40,39 @@ export default function Navbar() {
                 </Link>
 
                 <div className="hidden md:flex gap-10 text-sm text-white/70">
-                    {links.map((link) => (
-                        <Link key={link.name} href={link.href} className="relative group tracking-wide hover:text-white transition">
-                            {link.name}
-                            <span className="absolute left-0 -bottom-2 h-px w-0 bg-[#C9A227] transition-all duration-300 group-hover:w-full" />
-                        </Link>
-                    ))}
+                    <Link href="/about" className="relative group tracking-wide hover:text-white transition">
+                        About
+                        <span className="absolute left-0 -bottom-2 h-px w-0 bg-[#C9A227] transition-all duration-300 group-hover:w-full" />
+                    </Link>
+
+                    <div className="relative" onMouseEnter={() => setAreasOpen(true)} onMouseLeave={() => setAreasOpen(false)}>
+                        <button className="flex items-center gap-1 tracking-wide hover:text-white transition">
+                            Service Areas <ChevronDown className="w-3 h-3" />
+                        </button>
+
+                        <AnimatePresence>
+                            {areasOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 10 }}
+                                    transition={{ duration: 0.25 }}
+                                    className="absolute top-8 left-1/2 -translate-x-1/2 w-56 border border-white/10 bg-black/70 backdrop-blur-xl shadow-xl p-4"
+                                >
+                                    {serviceAreas.map((area) => (
+                                        <Link key={area} href="/service-areas" className="block px-3 py-2 text-white/60 hover:text-white hover:bg-white/5 transition">
+                                            {area}
+                                        </Link>
+                                    ))}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+
+                    <Link href="/about#contact" className="relative group tracking-wide hover:text-white transition">
+                        Contact
+                        <span className="absolute left-0 -bottom-2 h-px w-0 bg-[#C9A227] transition-all duration-300 group-hover:w-full" />
+                    </Link>
                 </div>
 
                 <a

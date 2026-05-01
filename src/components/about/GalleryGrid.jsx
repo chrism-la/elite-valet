@@ -24,12 +24,12 @@ export default function GalleryGrid() {
                             className={`
                                 relative overflow-hidden bg-white/10
                                 h-72 sm:h-80
-                                ${index === 0 ? 'md:col-span-3 md:h-[420px]' : ''}
-                                ${index === 1 ? 'md:col-span-3 md:h-[360px] md:mt-16' : ''}
-                                ${index === 2 ? 'md:col-span-6 md:h-[520px]' : ''}
-                                ${index === 3 ? 'md:col-span-2 md:h-[360px]' : ''}
-                                ${index === 4 ? 'md:col-span-2 md:h-[420px] md:mt-12' : ''}
-                                ${index === 5 ? 'md:col-span-2 md:h-[360px]' : ''}
+                                ${index === 0 ? 'md:col-span-3 md:h-105' : ''}
+                                ${index === 1 ? 'md:col-span-3 md:h-90 md:mt-16' : ''}
+                                ${index === 2 ? 'md:col-span-6 md:h-130' : ''}
+                                ${index === 3 ? 'md:col-span-2 md:h-90' : ''}
+                                ${index === 4 ? 'md:col-span-2 md:h-105 md:mt-12' : ''}
+                                ${index === 5 ? 'md:col-span-2 md:h-90' : ''}
                             `}
                         >
                             <Image
