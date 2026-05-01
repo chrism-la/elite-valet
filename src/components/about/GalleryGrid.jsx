@@ -3,12 +3,14 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+const images = ['beverly-hills-event-1.webp', 'beverly-hills-event-2.webp', 'key-retrieval.webp', 'employee-supervisors.webp', 'castaway-employees-1.webp', 'cashier-employee.webp'];
+
 export default function GalleryGrid() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((num, index) => (
+            {images.map((src, index) => (
                 <motion.div
-                    key={num}
+                    key={src}
                     initial={{ opacity: 0, y: 40, scale: 0.96 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true, amount: 0.25 }}
@@ -28,8 +30,8 @@ export default function GalleryGrid() {
                     `}
                 >
                     <Image
-                        src={`/gallery/${num}.jpg`}
-                        alt={`Elite Valet gallery image ${num}`}
+                        src={`/gallery/${src}`}
+                        alt={`Valet service image ${index + 1}`}
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover transition duration-700 hover:scale-105"
