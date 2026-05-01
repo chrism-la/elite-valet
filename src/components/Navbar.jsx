@@ -11,12 +11,15 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [areasOpen, setAreasOpen] = useState(false);
 
-    const links = [
-        { name: 'About', href: '/about' },
-        { name: 'Service Areas', href: '/service-areas' },
-        { name: 'Contact', href: '/about#contact' },
+    const serviceAreas = [
+        { name: 'Beverly Hills', href: '/service-areas#beverly-hills' },
+        { name: 'Studio City', href: '/service-areas#studio-city' },
+        { name: 'West Hollywood', href: '/service-areas#west-hollywood' },
+        { name: 'Sunset Plaza', href: '/service-areas#sunset-plaza' },
+        { name: 'Burbank', href: '/service-areas#burbank' },
+        { name: 'Pasadena', href: '/service-areas#pasadena' },
+        { name: 'Glendale', href: '/service-areas#glendale' },
     ];
-    const serviceAreas = ['Beverly Hills', 'Studio City', 'Hollywood', 'Sunset Plaza', 'Burbank', 'Los Angeles County'];
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -46,9 +49,9 @@ export default function Navbar() {
                     </Link>
 
                     <div className="relative" onMouseEnter={() => setAreasOpen(true)} onMouseLeave={() => setAreasOpen(false)}>
-                        <button className="flex items-center gap-1 tracking-wide hover:text-white transition">
+                        <Link href="/service-areas" className="flex items-center gap-1 tracking-wide hover:text-white transition">
                             Service Areas <ChevronDown className="w-3 h-3" />
-                        </button>
+                        </Link>
 
                         <AnimatePresence>
                             {areasOpen && (
@@ -60,8 +63,8 @@ export default function Navbar() {
                                     className="absolute top-8 left-1/2 -translate-x-1/2 w-56 border border-white/10 bg-black/70 backdrop-blur-xl shadow-xl p-4"
                                 >
                                     {serviceAreas.map((area) => (
-                                        <Link key={area} href="/service-areas" className="block px-3 py-2 text-white/60 hover:text-white hover:bg-white/5 transition">
-                                            {area}
+                                        <Link key={area.name} href={area.href} className="block px-3 py-2 text-white/60 hover:text-white hover:bg-white/5 transition">
+                                            {area.name}
                                         </Link>
                                     ))}
                                 </motion.div>
@@ -121,10 +124,15 @@ export default function Navbar() {
 
                                 {/* SERVICE AREAS (ACCORDION) */}
                                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
-                                    <button onClick={() => setAreasOpen((v) => !v)} className="flex items-center gap-2 text-white text-xl font-light">
-                                        Service Areas
-                                        <ChevronDown className={`w-4 h-4 transition ${areasOpen ? 'rotate-180' : ''}`} />
-                                    </button>
+                                    <div className="flex items-center justify-between">
+                                        <Link href="/service-areas" onClick={() => setOpen(false)} className="text-white text-xl font-light">
+                                            Service Areas
+                                        </Link>
+
+                                        <button onClick={() => setAreasOpen((v) => !v)} aria-label="Toggle service areas">
+                                            <ChevronDown className={`w-4 h-4 transition ${areasOpen ? 'rotate-180' : ''}`} />
+                                        </button>
+                                    </div>
 
                                     <AnimatePresence>
                                         {areasOpen && (
@@ -135,8 +143,8 @@ export default function Navbar() {
                                                 className="overflow-hidden mt-4 ml-4 flex flex-col gap-3"
                                             >
                                                 {serviceAreas.map((area) => (
-                                                    <Link key={area} href="/service-areas" onClick={() => setOpen(false)} className="text-white/50 text-base">
-                                                        {area}
+                                                    <Link key={area.name} href={area.href} onClick={() => setOpen(false)} className="text-white/50 text-base">
+                                                        {area.name}
                                                     </Link>
                                                 ))}
                                             </motion.div>
