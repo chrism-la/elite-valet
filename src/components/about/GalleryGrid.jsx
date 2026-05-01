@@ -33,7 +33,7 @@ export default function GalleryGrid() {
                             `}
                         >
                             <Image
-                                src={`/gallery/${src}`}
+                                src={`/Gallery/${src}`}
                                 alt={`Elite Valet gallery image ${index + 1}`}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 33vw"

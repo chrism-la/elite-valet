@@ -15,8 +15,8 @@ export default function AboutHero() {
                 transition={{ duration: 1.6, ease: 'easeOut' }}
                 className="absolute inset-0 w-full h-full"
             >
-                <video className="w-full h-full object-cover scale-[1.04]" autoPlay muted loop playsInline preload="metadata" poster="/hero-poster.jpg">
-                    <source src="/wrong.mp4" type="video/mp4" />
+                <video className="w-full h-full object-cover scale-[1.04]" autoPlay muted loop playsInline preload="metadata" poster="/hero-poster.JPG">
+                    <source src="/wrong.mp4" type="wrong/mp4" />
                 </video>
             </motion.div>
 

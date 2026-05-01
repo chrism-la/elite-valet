@@ -12,7 +12,7 @@ export default function AboutContact() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: 0.9, ease: 'easeOut' }}
-                className="max-w-6xl mx-auto border border-white/10 bg-white/[0.03] px-6 py-14 md:p-16"
+                className="max-w-6xl mx-auto border border-white/10 bg-white/3 px-6 py-14 md:p-16"
             >
                 <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Contact</p>
 
