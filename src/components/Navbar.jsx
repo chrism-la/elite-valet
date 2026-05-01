@@ -112,13 +112,44 @@ export default function Navbar() {
                             </motion.button>
 
                             <div className="mt-24 flex flex-col gap-6">
-                                {links.map((link, i) => (
-                                    <motion.div key={link.name} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 + i * 0.1 }}>
-                                        <Link href={link.href} onClick={() => setOpen(false)} className="text-white text-xl font-light">
-                                            {link.name}
-                                        </Link>
-                                    </motion.div>
-                                ))}
+                                {/* ABOUT */}
+                                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
+                                    <Link href="/about" onClick={() => setOpen(false)} className="text-white text-xl font-light">
+                                        About
+                                    </Link>
+                                </motion.div>
+
+                                {/* SERVICE AREAS (ACCORDION) */}
+                                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
+                                    <button onClick={() => setAreasOpen((v) => !v)} className="flex items-center gap-2 text-white text-xl font-light">
+                                        Service Areas
+                                        <ChevronDown className={`w-4 h-4 transition ${areasOpen ? 'rotate-180' : ''}`} />
+                                    </button>
+
+                                    <AnimatePresence>
+                                        {areasOpen && (
+                                            <motion.div
+                                                initial={{ opacity: 0, height: 0 }}
+                                                animate={{ opacity: 1, height: 'auto' }}
+                                                exit={{ opacity: 0, height: 0 }}
+                                                className="overflow-hidden mt-4 ml-4 flex flex-col gap-3"
+                                            >
+                                                {serviceAreas.map((area) => (
+                                                    <Link key={area} href="/service-areas" onClick={() => setOpen(false)} className="text-white/50 text-base">
+                                                        {area}
+                                                    </Link>
+                                                ))}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </motion.div>
+
+                                {/* CONTACT */}
+                                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
+                                    <Link href="/about#contact" onClick={() => setOpen(false)} className="text-white text-xl font-light">
+                                        Contact
+                                    </Link>
+                                </motion.div>
                             </div>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-10 pt-6 border-t border-white/10">
