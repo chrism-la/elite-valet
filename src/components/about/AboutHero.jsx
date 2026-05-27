@@ -7,7 +7,7 @@ export default function AboutHero() {
     const textY = useTransform(scrollY, [0, 400], [0, 60]);
     const textOpacity = useTransform(scrollY, [0, 300], [1, 0.15]);
     return (
-        <section className="relative h-[85vh] min-h-155 w-full overflow-hidden flex items-center justify-center text-center px-6 md:px-16">
+        <section className="relative h-[85vh] min-h-155 w-full overflow-hidden flex items-center justify-center text-center px-6 md:px-16 lg:px-24 2xl:px-32">
             {/* VIDEO / POSTER */}
             <motion.div
                 initial={{ opacity: 0, filter: 'blur(14px)' }}
@@ -25,7 +25,7 @@ export default function AboutHero() {
             <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/60 to-black/90" />
 
             {/* TEXT */}
-            <motion.div style={{ y: textY, opacity: textOpacity }} className="relative z-10 max-w-4xl">
+            <motion.div style={{ y: textY, opacity: textOpacity }} className="relative z-10 max-w-5xl">
                 <motion.h1
                     initial={{ opacity: 0, y: 28 }}
                     animate={{ opacity: 1, y: 0 }}

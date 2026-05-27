@@ -30,10 +30,6 @@ export default function Services() {
     const cardsY = useTransform(scrollYProgress, [0.15, 0.6], [100, 0]);
     const cardsOpacity = useTransform(scrollYProgress, [0.15, 0.45], [0, 1]);
 
-    // Parallax depth (≈30px difference)
-    const iconY = useTransform(scrollYProgress, [0.1, 1], [30, -30]);
-    const textY = useTransform(scrollYProgress, [0.2, 0.8], [15, -15]);
-
     return (
         <section ref={sectionRef} className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 pt-20 pb-12 md:pt-28 md:pb-16">
             <div className="mx-auto max-w-7xl 2xl:max-w-375">
@@ -56,35 +52,30 @@ export default function Services() {
                         return (
                             <motion.div
                                 key={service.title}
-                                initial={{ opacity: 0, y: 40, scale: 0.92 }}
-                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                initial={{ opacity: 0, y: 22 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.25 }}
                                 transition={{
-                                    delay: index * (typeof window !== 'undefined' && window.innerWidth < 768 ? 0.06 : 0.1),
-                                    duration: typeof window !== 'undefined' && window.innerWidth < 768 ? 0.55 : 0.7,
+                                    delay: index * 0.05,
+                                    duration: 0.5,
                                     ease: 'easeOut',
                                 }}
-                                className="bg-[#0B0B0F] p-8 md:p-10 xl:p-12 min-h-64 xl:min-h-72 text-center flex flex-col items-center justify-center"
+                                className="group relative overflow-hidden bg-[#0B0B0F] border border-transparent p-8 md:p-10 xl:p-12 min-h-64 xl:min-h-72 text-center flex flex-col items-center justify-center transition duration-700 hover:border-[#C9A227]/15"
                             >
-                                <motion.div
-                                    style={{ y: iconY }}
-                                    initial={{ scale: 0.8, opacity: 0 }}
-                                    whileInView={{ scale: 1, opacity: 1 }}
-                                    viewport={{ once: true, amount: 0.25 }}
-                                    transition={{
-                                        delay: index * (typeof window !== 'undefined' && window.innerWidth < 768 ? 0.06 : 0.1) + 0.15,
-                                        duration: 0.35,
-                                        ease: 'easeOut',
-                                    }}
-                                >
-                                    <Icon className="w-8 h-8 text-[#C9A227] mb-8 opacity-90" />
-                                </motion.div>
+                                {/* Ambient Glow */}
+                                <div className="absolute inset-0 opacity-0 transition duration-700 group-hover:opacity-100 pointer-events-none">
+                                    <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-[#C9A227]/10 blur-3xl translate-x-1/3 -translate-y-1/3" />
+                                </div>
 
-                                <motion.div style={{ y: textY }}>
+                                <div className="relative z-10 transition duration-500 group-hover:-translate-y-1">
+                                    <Icon className="w-8 h-8 text-[#C9A227] mb-8 opacity-80 transition duration-500 group-hover:opacity-100" />
+                                </div>
+
+                                <div className="relative z-10 transition duration-500 group-hover:translate-y-1">
                                     <h3 className="text-white text-xl font-light mb-4">{service.title}</h3>
 
                                     <p className="text-white/60 text-[15px] md:text-sm leading-relaxed max-w-xs">{service.text}</p>
-                                </motion.div>
+                                </div>
                             </motion.div>
                         );
                     })}

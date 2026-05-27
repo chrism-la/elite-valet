@@ -5,19 +5,19 @@ import Link from 'next/link';
 
 export default function CTA() {
     return (
-        <section className="bg-[#0B0B0F] px-6 md:px-16 py-20 md:py-28">
+        <section className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 py-20 md:py-28">
             <motion.div
                 initial={{ opacity: 0, y: 40, scale: 0.97 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: 0.9, ease: 'easeOut' }}
-                className="max-w-6xl mx-auto text-center border border-white/10 bg-white/3 px-6 py-16 md:py-24"
+                className="mx-auto max-w-7xl 2xl:max-w-375 text-center border border-white/10 bg-white/3 px-6 md:px-12 xl:px-16 py-16 md:py-24"
             >
                 <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Request Service</p>
 
                 <div className="w-12 h-px bg-[#C9A227]/60 mx-auto mb-6" />
 
-                <h2 className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight max-w-4xl mx-auto">Ready to elevate your guest arrival experience?</h2>
+                <h2 className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight max-w-5xl mx-auto">Ready to elevate your guest arrival experience?</h2>
 
                 <p className="mt-6 text-white/50 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">Request valet service for your next private event, venue, or hospitality operation.</p>
 

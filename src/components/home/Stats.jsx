@@ -13,10 +13,10 @@ const stats = [
 
 export default function Stats() {
     return (
-        <section className="bg-[#0B0B0F] px-6 md:px-16 py-20 md:py-24">
-            <div className="max-w-6xl mx-auto">
+        <section className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 py-20 md:py-24">
+            <div className="mx-auto max-w-7xl 2xl:max-w-375">
                 {/* HEADER */}
-                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: 'easeOut' }} className="mb-20 max-w-3xl">
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: 'easeOut' }} className="mb-20 max-w-4xl">
                     <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Our Experience</p>
                     <div className="w-12 h-px bg-[#C9A227]/60 mb-6" />
 
@@ -27,7 +27,7 @@ export default function Stats() {
                 </motion.div>
 
                 {/* STATS */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16 xl:gap-24">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={stat.label}

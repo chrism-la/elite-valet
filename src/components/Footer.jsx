@@ -5,10 +5,10 @@ import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
     return (
-        <footer className="bg-[#0B0B0F] px-6 md:px-16 pt-16 pb-10 border-t border-white/10">
-            <div className="max-w-6xl mx-auto">
+        <footer className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 pt-16 pb-10 border-t border-white/10">
+            <div className="mx-auto max-w-7xl 2xl:max-w-375">
                 {/* TOP */}
-                <div className="flex flex-col md:flex-row md:justify-between gap-10 mb-12">
+                <div className="flex flex-col md:flex-row md:justify-between gap-12 xl:gap-24 mb-12">
                     {/* LOGO + INFO */}
                     <div className="max-w-sm">
                         <img src="/elite-logo.png" alt="Elite Valet" className="h-10 mb-6 opacity-90" />
@@ -17,7 +17,7 @@ export default function Footer() {
                     </div>
 
                     {/* LINKS */}
-                    <div className="flex flex-col md:flex-row gap-10 md:gap-16 text-sm">
+                    <div className="flex flex-col md:flex-row gap-10 md:gap-16 xl:gap-24 text-sm">
                         <div className="flex flex-col gap-3">
                             <p className="text-white text-sm tracking-wide mb-2">Navigation</p>
                             <Link href="/about" className="text-white/50 hover:text-white transition">

@@ -19,19 +19,19 @@ const steps = [
 
 export default function Experience() {
     return (
-        <section className="bg-linear-to-b from-[#0B0B0F] via-[#0E0E13] to-[#0B0B0F] px-6 md:px-16 py-24 md:py-32">
-            <div className="max-w-6xl mx-auto text-center">
+        <section className="bg-linear-to-b from-[#0B0B0F] via-[#0E0E13] to-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 py-24 md:py-32">
+            <div className="mx-auto max-w-7xl 2xl:max-w-375 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 40, scale: 0.97 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.9, ease: 'easeOut' }}
-                    className="max-w-3xl mx-auto mb-20"
+                    className="max-w-4xl 2xl:max-w-5xl mx-auto mb-20"
                 >
                     <h2 className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight">A refined arrival experience from start to finish.</h2>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 xl:gap-24">
                     {steps.map((step, index) => (
                         <motion.div
                             key={step.title}

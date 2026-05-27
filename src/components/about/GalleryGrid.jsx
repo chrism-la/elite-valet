@@ -7,9 +7,9 @@ const images = ['beverly-hills-event-1.webp', 'beverly-hills-event-2.webp', 'key
 
 export default function GalleryGrid() {
     return (
-        <section className="bg-[#0B0B0F] px-6 md:px-16 py-16 md:py-24">
-            <div className="max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-5">
+        <section className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 py-16 md:py-24">
+            <div className="mx-auto max-w-7xl 2xl:max-w-375">
+                <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-5 xl:gap-6">
                     {images.map((src, index) => (
                         <motion.div
                             key={src}
@@ -37,7 +37,7 @@ export default function GalleryGrid() {
                                 alt={`Elite Valet gallery image ${index + 1}`}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 33vw"
-                                className="object-cover transition duration-700 hover:scale-[1.03]"
+                                className="object-cover transition duration-1000 hover:scale-[1.02]"
                             />
 
                             <div className="absolute inset-0 bg-black/25" />
