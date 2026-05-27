@@ -5,13 +5,13 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactForm() {
     return (
-        <section className="px-6 pt-16 pb-28 md:px-16 md:pt-20">
-            <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <section className="px-6 pt-16 pb-28 md:px-16 md:pt-20 lg:px-24 2xl:px-32">
+            <div className="mx-auto grid max-w-6xl gap-10 xl:max-w-7xl 2xl:max-w-325 xl:grid-cols-[1.1fr_0.9fr] xl:gap-14">
                 <motion.form
                     initial={{ opacity: 0, y: 18 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15, duration: 0.6, ease: 'easeOut' }}
-                    className="border border-white/10 bg-white/[0.035] p-6 md:p-8"
+                    className="border border-white/10 bg-white/3.5 p-6 md:p-8 xl:p-10"
                 >
                     <div className="grid gap-5 md:grid-cols-2">
                         <Field label="Name" type="text" name="name" />
@@ -48,7 +48,7 @@ export default function ContactForm() {
                     initial={{ opacity: 0, y: 18 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.25, duration: 0.6, ease: 'easeOut' }}
-                    className="border border-white/10 bg-white/2.5 p-6 md:p-8 lg:self-start"
+                    className="border border-white/10 bg-white/2.5 p-6 md:p-8 xl:p-10 xl:self-start"
                 >
                     <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#C9A227]">Direct Contact</p>
 

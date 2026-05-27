@@ -81,9 +81,9 @@ export default function ServiceAreasLocations() {
         }
     }, []);
     return (
-        <section className="px-6 py-20 md:px-12 lg:px-20">
-            <div className="mx-auto max-w-7xl">
-                <div className="mb-16 max-w-2xl">
+        <section className="px-6 py-20 md:px-12 lg:px-20 xl:px-24 2xl:px-32">
+            <div className="mx-auto max-w-7xl 2xl:max-w-375">
+                <div className="mb-16 max-w-3xl">
                     <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#C9A227] md:text-sm">Featured Locations</p>
 
                     <h2 className="text-3xl font-light tracking-tight md:text-5xl">Local service, tailored to each arrival.</h2>
@@ -105,15 +105,15 @@ export default function ServiceAreasLocations() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: '-120px' }}
                                 transition={{ duration: 0.7 }}
-                                className={`scroll-mt-28 grid items-center gap-8 lg:grid-cols-2 lg:gap-16 ${isReversed ? 'lg:[&>*:first-child]:order-2' : ''}`}
+                                className={`scroll-mt-32 grid items-center gap-10 xl:grid-cols-2 xl:gap-20 ${isReversed ? 'xl:[&>*:first-child]:order-2' : ''}`}
                             >
                                 {/* Image */}
-                                <div className="group relative h-90 overflow-hidden border border-white/10 bg-white/3 md:h-115">
+                                <div className="group relative h-90 overflow-hidden border border-white/10 bg-white/3 md:h-110 xl:h-115">
                                     <Image
                                         src={location.image}
                                         alt={`${location.name} valet service area`}
                                         fill
-                                        className="object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-95"
+                                        className="object-cover opacity-80 transition duration-1000 group-hover:scale-[1.03] group-hover:opacity-95"
                                         sizes="(max-width: 1024px) 100vw, 50vw"
                                     />
 

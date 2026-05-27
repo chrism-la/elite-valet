@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 
 export default function ContactHero() {
     return (
-        <section className="relative overflow-hidden px-6 pt-36 pb-24 md:px-16 md:pt-40 md:pb-28">
+        <section className="relative overflow-hidden px-6 pt-36 pb-24 md:px-16 md:pt-40 md:pb-28 lg:px-24 2xl:px-32">
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-0 right-0 h-1054w-105nded-full bg-[#C9A227]/10 blur-[120px] translate-x-1/3 -translate-y-1/3" />
+                <div className="absolute top-0 right-0 h-105 w-105 rounded-full bg-[#C9A227]/10 blur-[120px] translate-x-1/3 -translate-y-1/3" />
                 <div className="absolute bottom-0 left-0 h-90 w-90 rounded-full bg-white/5 blur-[120px] -translate-x-1/3 translate-y-1/3" />
             </div>
 
-            <div className="relative z-10 mx-auto max-w-6xl">
+            <div className="relative z-10 mx-auto max-w-7xl 2xl:max-w-375">
                 <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-5 text-xs uppercase tracking-[0.35em] text-[#C9A227] md:text-sm">
                     Request Service
                 </motion.p>
@@ -19,7 +19,7 @@ export default function ContactHero() {
                     initial={{ opacity: 0, y: 26 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.75 }}
-                    className="max-w-4xl text-4xl font-light leading-tight tracking-tight md:text-6xl lg:text-7xl"
+                    className="max-w-4xl xl:max-w-5xl text-4xl font-light leading-tight tracking-tight md:text-6xl lg:text-7xl"
                 >
                     Tell us about your event. We’ll help handle the arrival.
                 </motion.h1>

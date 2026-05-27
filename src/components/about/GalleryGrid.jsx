@@ -22,7 +22,7 @@ export default function GalleryGrid() {
                                 ease: 'easeOut',
                             }}
                             className={`
-                                relative overflow-hidden bg-white/10
+    group relative overflow-hidden bg-white/10
                                 h-72 sm:h-80
                                 ${index === 0 ? 'md:col-span-3 md:h-105' : ''}
                                 ${index === 1 ? 'md:col-span-3 md:h-90 md:mt-16' : ''}
@@ -37,10 +37,10 @@ export default function GalleryGrid() {
                                 alt={`Elite Valet gallery image ${index + 1}`}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 33vw"
-                                className="object-cover transition duration-1000 hover:scale-[1.02]"
+                                className="object-cover transition duration-1000 group-hover:scale-[1.02]"
                             />
 
-                            <div className="absolute inset-0 bg-black/25" />
+                            <div className="pointer-events-none absolute inset-0 bg-black/25" />
                         </motion.div>
                     ))}
                 </div>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutStory() {
     return (
-        <section className="relative overflow-hidden bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 py-20 md:py-28">
+        <section className="relative overflow-hidden bg-[#0B0B0F] px-6 md:px-16 xl:px-24 2xl:px-32 py-20 md:py-28">
             {/* Ambient Glow */}
             <div className="absolute inset-0 pointer-events-none">
                 {/* Gold top-right glow */}
@@ -13,14 +13,14 @@ export default function AboutStory() {
                 {/* Soft white bottom-left glow */}
                 <div className="absolute bottom-0 left-0 h-90 w-90 bg-white/5 blur-[120px] rounded-full -translate-x-1/3 translate-y-1/3" />
             </div>
-            <div className="relative z-10 mx-auto max-w-7xl 2xl:max-w-375 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20 xl:gap-28">
+            <div className="relative z-10 mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-375 grid grid-cols-1 gap-12 xl:grid-cols-12 xl:gap-24">
                 {/* LEFT */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
                     transition={{ duration: 0.9, ease: 'easeOut' }}
-                    className="md:col-span-5"
+                    className="xl:col-span-5"
                 >
                     <div className="w-10 h-px bg-white/20 mb-6" />
 
@@ -33,7 +33,7 @@ export default function AboutStory() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
                     transition={{ delay: 0.2, duration: 0.9, ease: 'easeOut' }}
-                    className="md:col-span-6 md:col-start-7 space-y-8 text-white/55 text-[15px] md:text-base leading-relaxed"
+                    className="xl:col-span-6 xl:col-start-7 space-y-8 text-white/55 text-[15px] md:text-base leading-relaxed"
                 >
                     <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
                         Founded in 2013, Elite Car Valet has provided premium valet service across the Los Angeles County, including Beverly Hills, Studio City, Hollywood, Sunset Plaza, and Burbank.

@@ -28,9 +28,9 @@ const highlights = [
 
 export default function ServiceAreasHighlights() {
     return (
-        <section className="px-6 py-24 md:px-12 lg:px-20">
-            <div className="mx-auto max-w-7xl">
-                <div className="mb-14 max-w-2xl">
+        <section className="px-6 py-24 md:px-12 lg:px-20 xl:px-24 2xl:px-32">
+            <div className="mx-auto max-w-7xl 2xl:max-w-375">
+                <div className="mb-14 max-w-3xl">
                     <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#C9A227] md:text-sm">Valet Solutions</p>
 
                     <h2 className="text-3xl font-light tracking-tight md:text-5xl">Built for events, venues, and guest-first experiences.</h2>
@@ -40,7 +40,7 @@ export default function ServiceAreasHighlights() {
                     </p>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4 xl:gap-5">
                     {highlights.map((item, index) => {
                         const Icon = item.icon;
 
@@ -51,13 +51,15 @@ export default function ServiceAreasHighlights() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: '-100px' }}
                                 transition={{ duration: 0.55, delay: index * 0.08 }}
-                                className="group border border-white/10 bg-white/3 p-7 transition hover:border-[#C9A227]/40 hover:bg-white/5"
+                                className="group relative overflow-hidden border border-white/10 bg-white/3 p-7 xl:p-8 transition duration-700 hover:border-[#C9A227]/20"
                             >
-                                <Icon className="mb-8 h-7 w-7 text-[#C9A227]" />
+                                <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-700 group-hover:opacity-100">
+                                    <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-[#C9A227]/10 blur-3xl translate-x-1/3 -translate-y-1/3" />
+                                </div>
+                                <Icon className="relative z-10 mb-8 h-7 w-7 text-[#C9A227] opacity-80 transition duration-500 group-hover:opacity-100" />
+                                <h3 className="relative z-10 text-xl font-light text-white">{item.title}</h3>
 
-                                <h3 className="text-xl font-light text-white">{item.title}</h3>
-
-                                <p className="mt-4 leading-7 text-white/50">{item.text}</p>
+                                <p className="relative z-10 mt-4 leading-7 text-white/50">{item.text}</p>
 
                                 <div className="mt-8 h-px w-10 bg-white/10 transition group-hover:w-20 group-hover:bg-[#C9A227]/60" />
                             </motion.div>
