@@ -6,9 +6,9 @@ import CountUp from '@/components/CountUp';
 
 const stats = [
     { number: 15, suffix: '+', label: 'Years Experience' },
-    { number: 250, suffix: '+', label: 'Events Managed' },
+    { number: 450, suffix: '+', label: 'Events Managed' },
     { number: 100, suffix: '%', label: 'Licensed & Insured' },
-    { number: 10, suffix: '+', label: 'Cities serviced' },
+    { number: 100, suffix: 'K+', label: 'Cars Parked' },
 ];
 
 export default function Stats() {
