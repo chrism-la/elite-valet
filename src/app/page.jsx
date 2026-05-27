@@ -1,9 +1,9 @@
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Stats from '@/components/Stats';
-import Experience from '@/components/Experience';
-import CTA from '@/components/CTA';
+import Hero from '@/components/home/Hero';
+import Services from '@/components/home/Services';
+import Stats from '@/components/home/Stats';
+import Experience from '@/components/home/Experience';
+import CTA from '@/components/home/CTA';
 import Footer from '@/components/Footer';
 
 export const metadata = {

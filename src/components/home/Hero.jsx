@@ -39,8 +39,8 @@ export default function Hero() {
             <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/30 to-black/10" />
 
             {/* CONTENT */}
-            <motion.div style={{ y, opacity }} className="relative w-full px-6 md:px-16 pb-32 md:pb-20">
-                <motion.div style={{ y: textY }} className="max-w-xl relative">
+            <motion.div style={{ y, opacity }} className="relative w-full px-6 md:px-16 lg:px-24 2xl:px-32 pb-32 md:pb-20">
+                <motion.div style={{ y: textY }} className="max-w-xl md:max-w-2xl 2xl:max-w-3xl relative">
                     <motion.p
                         initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
                         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}

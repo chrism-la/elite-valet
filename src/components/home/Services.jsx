@@ -35,8 +35,8 @@ export default function Services() {
     const textY = useTransform(scrollYProgress, [0.2, 0.8], [15, -15]);
 
     return (
-        <section ref={sectionRef} className="bg-[#0B0B0F] px-6 md:px-16 pt-20 pb-12 md:pt-28 md:pb-16">
-            <div className="max-w-6xl mx-auto">
+        <section ref={sectionRef} className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 pt-20 pb-12 md:pt-28 md:pb-16">
+            <div className="mx-auto max-w-7xl 2xl:max-w-375">
                 {/* HEADER */}
                 <motion.div style={{ y: headerY, opacity: headerOpacity, scale: headerScale }} className="mb-12 md:mb-16 max-w-4xl">
                     <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Our Services</p>
@@ -64,7 +64,7 @@ export default function Services() {
                                     duration: typeof window !== 'undefined' && window.innerWidth < 768 ? 0.55 : 0.7,
                                     ease: 'easeOut',
                                 }}
-                                className="bg-[#0B0B0F] p-8 md:p-10 min-h-64 text-center flex flex-col items-center justify-center"
+                                className="bg-[#0B0B0F] p-8 md:p-10 xl:p-12 min-h-64 xl:min-h-72 text-center flex flex-col items-center justify-center"
                             >
                                 <motion.div
                                     style={{ y: iconY }}
