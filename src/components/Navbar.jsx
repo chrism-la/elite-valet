@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { ChevronDown } from 'lucide-react';
 
 export default function Navbar() {
@@ -72,18 +72,18 @@ export default function Navbar() {
                         </AnimatePresence>
                     </div>
 
-                    <Link href="/about#contact" className="relative group tracking-wide hover:text-white transition">
+                    <Link href="/contact" className="relative group tracking-wide hover:text-white transition">
                         Contact
                         <span className="absolute left-0 -bottom-2 h-px w-0 bg-[#C9A227] transition-all duration-300 group-hover:w-full" />
                     </Link>
                 </div>
 
-                <a
-                    href="mailto:yourbusiness@email.com"
+                <Link
+                    href="/contact"
                     className="hidden md:block rounded-full px-6 py-2.5 text-sm tracking-wide text-black bg-linear-to-r from-[#C9A227] via-[#E6C75A] to-[#C9A227] shadow-[0_0_20px_rgba(201,162,39,0.25)] hover:scale-[1.03] active:scale-[0.98] transition"
                 >
                     Book Valet
-                </a>
+                </Link>
 
                 <button onClick={() => setOpen((v) => !v)} className="md:hidden flex flex-col gap-1.5" aria-label="Toggle menu">
                     <motion.span animate={open ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }} transition={{ duration: 0.2 }} className="w-6 h-0.5 bg-white origin-center" />
@@ -154,19 +154,19 @@ export default function Navbar() {
 
                                 {/* CONTACT */}
                                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
-                                    <Link href="/about#contact" onClick={() => setOpen(false)} className="text-white text-xl font-light">
+                                    <Link href="/contact" onClick={() => setOpen(false)} className="text-white text-xl font-light">
                                         Contact
                                     </Link>
                                 </motion.div>
                             </div>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-10 pt-6 border-t border-white/10">
-                                <a
-                                    href="mailto:yourbusiness@email.com"
-                                    className="inline-block mt-4 rounded-full px-6 py-2.5 text-sm tracking-wide text-black bg-linear-to-r from-[#C9A227] via-[#E6C75A] to-[#C9A227] shadow-[0_0_20px_rgba(201,162,39,0.25)] hover:scale-[1.03] active:scale-[0.98] transition"
+                                <Link
+                                    href="/contact"
+                                    className="hidden md:block rounded-full px-6 py-2.5 text-sm tracking-wide text-black bg-linear-to-r from-[#C9A227] via-[#E6C75A] to-[#C9A227] shadow-[0_0_20px_rgba(201,162,39,0.25)] hover:scale-[1.03] active:scale-[0.98] transition"
                                 >
                                     Book Valet
-                                </a>
+                                </Link>
                             </motion.div>
 
                             <div className="mt-8 flex gap-5">
@@ -174,9 +174,6 @@ export default function Navbar() {
                                     <FaInstagram className="w-8 h-8" />
                                 </a>
 
-                                <a href="#" className="text-white/50 hover:text-white">
-                                    <FaFacebook className="w-8 h-8" />
-                                </a>
                                 <a href="#" className="text-white/50 hover:text-white ">
                                     <FaLinkedin className="w-8 h-8" />
                                 </a>

@@ -26,6 +26,9 @@ export default function Footer() {
                             <Link href="/service-areas" className="text-white/50 hover:text-white transition">
                                 Service Areas
                             </Link>
+                            <Link href="/contact" className="text-white/50 hover:text-white transition">
+                                Contact
+                            </Link>
                         </div>
 
                         <div className="flex flex-col gap-3">

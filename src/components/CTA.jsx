@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function CTA() {
     return (
@@ -20,12 +21,12 @@ export default function CTA() {
 
                 <p className="mt-6 text-white/50 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">Request valet service for your next private event, venue, or hospitality operation.</p>
 
-                <a
-                    href="mailto:yourbusiness@email.com"
+                <Link
+                    href="/contact"
                     className="mt-10 inline-block rounded-full px-8 py-4 text-sm tracking-wide text-black bg-linear-to-r from-[#C9A227] via-[#E6C75A] to-[#C9A227] shadow-[0_0_30px_rgba(201,162,39,0.25)] hover:scale-[1.03] active:scale-[0.98] transition"
                 >
                     Request a Quote
-                </a>
+                </Link>
             </motion.div>
         </section>
     );
