@@ -6,23 +6,24 @@ import CountUp from '@/components/CountUp';
 
 const stats = [
     { number: 15, suffix: '+', label: 'Years Experience' },
+    { number: 250, suffix: 'K +', label: 'Cars Parked' },
     { number: 450, suffix: '+', label: 'Events Managed' },
     { number: 100, suffix: '%', label: 'Licensed & Insured' },
-    { number: 100, suffix: 'K+', label: 'Cars Parked' },
 ];
 
 export default function Stats() {
     return (
         <section className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 py-20 md:py-24">
-            <div className="mx-auto max-w-7xl 2xl:max-w-375">
+            <div className="mx-auto max-w-7xl 2xl:max-w-400">
                 {/* HEADER */}
-                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: 'easeOut' }} className="mb-20 max-w-4xl">
-                    <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Our Experience</p>
-                    <div className="w-12 h-px bg-[#C9A227]/60 mb-6" />
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: 'easeOut' }} className="mb-20 max-w-5xl">
+                    <p className="text-[#ffc400] text-base font-semibold tracking-[0.45em] uppercase mb-5">Our Experience</p>
+
+                    <div className="w-12 h-px bg-[#ffc400] mb-6" />
 
                     <h2 className="text-4xl md:text-6xl font-light leading-tight tracking-tight">
                         <span className="text-white">Licensed & Insured</span>
-                        <span className="text-white/50"> — delivering a higher standard of valet service.</span>
+                        <span className="text-white/55"> — delivering a higher standard of valet service.</span>
                     </h2>
                 </motion.div>
 
@@ -39,24 +40,25 @@ export default function Stats() {
                                 duration: 0.7,
                                 ease: 'easeOut',
                             }}
-                            className="flex flex-col items-start"
+                            className="group flex flex-col items-start"
                         >
-                            <div className="flex flex-col items-start gap-4">
+                            <div className="flex flex-col items-start gap-5">
                                 {/* Icon */}
-                                <div className="w-8 h-8 rounded-full border border-[#C9A227]/40 flex items-center justify-center">
-                                    <Check className="w-4 h-4 text-[#C9A227]" />
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ffc400]/40 transition-all duration-500 group-hover:border-[#ffc400]/70 group-hover:shadow-[0_0_30px_rgba(255,196,0,0.12)]">
+                                    <Check className="h-5 w-5 text-[#ffc400] transition-transform duration-500 group-hover:scale-110" />
                                 </div>
 
                                 {/* Number */}
                                 <h3 className="text-4xl md:text-5xl font-light tracking-tight">
-                                    <span className="text-[#C9A227]">
+                                    <span className="text-[#ffc400]">
                                         <CountUp end={stat.number} />
                                     </span>
+
                                     <span className="text-white ml-1.5 text-2xl md:text-3xl align-top">{stat.suffix}</span>
                                 </h3>
 
                                 {/* Label */}
-                                <p className="text-white/50 text-sm tracking-wide">{stat.label}</p>
+                                <p className="text-white/65 text-lg tracking-wide">{stat.label}</p>
                             </div>
                         </motion.div>
                     ))}

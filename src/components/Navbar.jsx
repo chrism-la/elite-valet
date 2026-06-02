@@ -28,8 +28,7 @@ export default function Navbar() {
         return pathname.startsWith(href);
     };
 
-    const navLinkClass = (href) =>
-        `relative tracking-[0.08em] font-semibold text-base xl:text-[22px] transition duration-300 ${isActive(href) ? 'text-[#C9A227]' : 'text-white/85 hover:text-[#C9A227]'}`;
+    const navLinkClass = (href) => `relative tracking-[0.08em] text-base xl:text-[22px] transition duration-300 ${isActive(href) ? 'text-[#C9A227]' : 'text-white/85 hover:text-[#C9A227]'}`;
 
     return (
         <div className="fixed top-0 w-full z-50">
