@@ -29,7 +29,7 @@ export default function Navbar() {
     };
 
     const navLinkClass = (href) =>
-        `relative tracking-[0.08em] font-semibold text-base xl:text-[19px] transition duration-300 ${isActive(href) ? 'text-[#C9A227]' : 'text-white/85 hover:text-[#C9A227]'}`;
+        `relative tracking-[0.08em] font-semibold text-base xl:text-[22px] transition duration-300 ${isActive(href) ? 'text-[#C9A227]' : 'text-white/85 hover:text-[#C9A227]'}`;
 
     return (
         <div className="fixed top-0 w-full z-50">

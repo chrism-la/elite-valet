@@ -45,7 +45,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
                         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                         transition={{ delay: 0.6, duration: 1 }}
-                        className="text-white/90 text-lg md:text-2xl font-light leading-relaxed"
+                        className="text-white/90 text-lg md:text-3xl font-light leading-relaxed"
                     >
                         Luxury valet parking designed for private events, hotels, and high-profile venues — executed with{' '}
                         <span className="italic text-[#C9A227] drop-shadow-[0_0_16px_rgba(201,162,39,0.4)]">professionalism</span>.

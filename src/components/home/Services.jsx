@@ -32,18 +32,30 @@ export default function Services() {
 
     return (
         <section ref={sectionRef} className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 pt-20 pb-12 md:pt-28 md:pb-16">
-            <div className="mx-auto max-w-7xl 2xl:max-w-375">
+            <div className="mx-auto max-w-7xl 2xl:max-w-400">
                 {/* HEADER */}
-                <motion.div style={{ y: headerY, opacity: headerOpacity, scale: headerScale }} className="mb-12 md:mb-16 max-w-4xl">
-                    <p className="text-[#C9A227] text-xs tracking-[0.45em] uppercase mb-5 opacity-90">Our Services</p>
-                    <div className="w-12 h-px bg-[#C9A227]/60 mb-6" />
+                <motion.div style={{ y: headerY, opacity: headerOpacity, scale: headerScale }} className="mb-12 md:mb-16 grid gap-10 xl:grid-cols-[1.15fr_0.85fr] xl:items-end">
+                    <div className="max-w-4xl">
+                        <p className="text-[#ffc400] text-base font-semibold tracking-[0.45em] uppercase mb-5">Our Services</p>
 
-                    <h2 className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight">Parking service shaped around the guest experience.</h2>
+                        <div className="w-12 h-px bg-[#ffc400] mb-6" />
 
-                    <p className="mt-6 text-white/50 text-sm md:text-base max-w-2xl leading-relaxed">
-                        From private events to hospitality venues, our team brings a polished, organized, and discreet arrival experience.
-                    </p>
+                        <h2 className="text-4xl md:text-6xl font-light text-white leading-tight tracking-tight">Parking service shaped around the guest experience.</h2>
+
+                        <p className="mt-6 text-base leading-8 text-white/80 lg:text-lg lg:leading-9 max-w-2xl">
+                            From private events to hospitality venues, our team brings a polished, organized, and discreet arrival experience.
+                        </p>
+                    </div>
+
+                    <div className="hidden xl:flex justify-end">
+                        <div className="max-w-md border-l border-[#ffc400]/80 pl-8">
+                            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#ffc400]/90">Service Standard</p>
+
+                            <p className="mt-4 text-lg leading-8 text-white/75">Refined attendants, organized arrivals, and a polished curbside presence designed to make every guest feel expected.</p>
+                        </div>
+                    </div>
                 </motion.div>
+
                 {/* CARDS */}
                 <motion.div style={{ y: cardsY, opacity: cardsOpacity }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
                     {services.map((service, index) => {
@@ -52,29 +64,31 @@ export default function Services() {
                         return (
                             <motion.div
                                 key={service.title}
-                                initial={{ opacity: 0, y: 22 }}
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, amount: 0.25 }}
+                                viewport={{ once: true, amount: 0.2 }}
                                 transition={{
                                     delay: index * 0.05,
-                                    duration: 0.5,
-                                    ease: 'easeOut',
+                                    duration: 0.7,
+                                    ease: [0.22, 1, 0.36, 1],
                                 }}
-                                className="group relative overflow-hidden bg-[#0B0B0F] border border-transparent p-8 md:p-10 xl:p-12 min-h-64 xl:min-h-72 text-center flex flex-col items-center justify-center transition duration-700 hover:border-[#C9A227]/15"
+                                className="group relative overflow-hidden bg-[#0B0B0F] border border-transparent p-8 md:p-10 xl:p-12 min-h-72 xl:min-h-80 text-center flex flex-col items-center justify-center transition-all duration-700 ease-out hover:border-[#ffc400]/40"
                             >
-                                {/* Ambient Glow */}
-                                <div className="absolute inset-0 opacity-0 transition duration-700 group-hover:opacity-100 pointer-events-none">
-                                    <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-[#C9A227]/10 blur-3xl translate-x-1/3 -translate-y-1/3" />
+                                {/* Glow */}
+                                <div className="absolute inset-0 opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100 pointer-events-none">
+                                    <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-[#ffc400]/20 blur-3xl translate-x-1/3 -translate-y-1/3" />
                                 </div>
 
-                                <div className="relative z-10 transition duration-500 group-hover:-translate-y-1">
-                                    <Icon className="w-8 h-8 text-[#C9A227] mb-8 opacity-80 transition duration-500 group-hover:opacity-100" />
+                                {/* Icon */}
+                                <div className="relative z-10 transition-all duration-700 ease-out group-hover:-translate-y-2">
+                                    <Icon className="w-12 h-12 text-[#ffc400] mb-8 opacity-90 transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-100" />
                                 </div>
 
-                                <div className="relative z-10 transition duration-500 group-hover:translate-y-1">
-                                    <h3 className="text-white text-xl font-light mb-4">{service.title}</h3>
+                                {/* Content */}
+                                <div className="relative z-10 transition-all duration-700 ease-out group-hover:translate-y-1">
+                                    <h3 className="text-white text-2xl font-light mb-5 transition-colors duration-500 group-hover:text-[#ffc400]">{service.title}</h3>
 
-                                    <p className="text-white/60 text-[15px] md:text-sm leading-relaxed max-w-xs">{service.text}</p>
+                                    <p className="text-white/85 text-lg leading-8 max-w-sm">{service.text}</p>
                                 </div>
                             </motion.div>
                         );
