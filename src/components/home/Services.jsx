@@ -2,15 +2,39 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Car, Building2, GlassWater, BriefcaseBusiness, Heart, ShieldCheck } from 'lucide-react';
+import { FaChampagneGlasses, FaUtensils, FaHotel, FaAward, FaBuildingColumns, FaCrown } from 'react-icons/fa6';
 
 const services = [
-    { title: 'Private Events', text: 'Professional valet service for private parties, celebrations, and exclusive gatherings.', icon: GlassWater },
-    { title: 'Restaurants', text: 'Smooth guest arrivals and elevated parking support for upscale dining experiences.', icon: Building2 },
-    { title: 'Hotels', text: 'Reliable valet operations designed for hospitality, luxury stays, and guest convenience.', icon: Car },
-    { title: 'Weddings', text: 'Elegant arrival coordination for ceremonies, receptions, and high-end celebrations.', icon: Heart },
-    { title: 'Corporate Events', text: 'Polished valet service for business functions, brand events, and executive gatherings.', icon: BriefcaseBusiness },
-    { title: 'Luxury Venues', text: 'Discreet, organized, and professional valet support for premium venues.', icon: ShieldCheck },
+    {
+        title: 'Private Events',
+        text: 'Professional valet service for private parties, celebrations, and exclusive gatherings.',
+        icon: FaAward,
+    },
+    {
+        title: 'Restaurants',
+        text: 'Smooth guest arrivals and elevated parking support for upscale dining experiences.',
+        icon: FaUtensils,
+    },
+    {
+        title: 'Hotels',
+        text: 'Reliable valet operations designed for hospitality, luxury stays, and guest convenience.',
+        icon: FaHotel,
+    },
+    {
+        title: 'Weddings',
+        text: 'Elegant arrival coordination for ceremonies, receptions, and high-end celebrations.',
+        icon: FaChampagneGlasses,
+    },
+    {
+        title: 'Corporate Events',
+        text: 'Polished valet service for business functions, brand events, and executive gatherings.',
+        icon: FaBuildingColumns,
+    },
+    {
+        title: 'Luxury Venues',
+        text: 'Discreet, organized, and professional valet support for premium venues.',
+        icon: FaCrown,
+    },
 ];
 
 export default function Services() {
@@ -81,7 +105,21 @@ export default function Services() {
 
                                 {/* Icon */}
                                 <div className="relative z-10 transition-all duration-700 ease-out group-hover:-translate-y-2">
-                                    <Icon className="w-12 h-12 text-[#ffc400] mb-8 opacity-90 transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-100" />
+                                    <div className="mb-8">
+                                        <Icon
+                                            className="
+            h-9 w-9
+            opacity-90
+            transition-all duration-700 ease-out
+            group-hover:scale-110
+            group-hover:opacity-100
+        "
+                                            style={{
+                                                color: '#ffc400',
+                                                filter: 'drop-shadow(0 0 12px rgba(255,196,0,0.25))',
+                                            }}
+                                        />
+                                    </div>
                                 </div>
 
                                 {/* Content */}
