@@ -11,7 +11,7 @@ export default function ContactForm() {
                     initial={{ opacity: 0, y: 18 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15, duration: 0.6, ease: 'easeOut' }}
-                    className="relative overflow-hidden border border-white/15 bg-white/4 p-6 md:p-8 xl:p-10"
+                    className="relative overflow-hidden border border-white/50 bg-white/4 p-6 md:p-8 xl:p-10"
                 >
                     <div className="pointer-events-none absolute top-0 right-0 h-80 w-80 rounded-full bg-[#ffc400]/8 blur-3xl" />
 
@@ -31,7 +31,7 @@ export default function ContactForm() {
                             <textarea
                                 name="message"
                                 rows="6"
-                                className="w-full resize-none border border-white/15 bg-black/25 px-4 py-3 text-base text-white outline-none transition focus:border-[#ffc400]/60"
+                                className="w-full resize-none border border-white/75 bg-black/25 px-4 py-3 text-base text-white outline-none transition focus:border-[#ffc400]/60"
                             />
                         </div>
 

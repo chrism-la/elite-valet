@@ -88,10 +88,6 @@ export default function ServiceAreasLocations() {
                     <p className="mb-5 text-base font-semibold uppercase tracking-[0.45em] text-[#ffc400]">Featured Locations</p>
 
                     <h2 className="text-3xl font-light tracking-tight md:text-5xl">Local service, tailored to each arrival.</h2>
-
-                    <p className="mt-6 max-w-3xl text-base leading-8 text-white/75 lg:text-lg lg:leading-9">
-                        Each area has its own pace, parking challenges, and guest expectations. Our valet service is built to match the setting — not force every location into the same approach.
-                    </p>
                 </div>
 
                 <div className="space-y-20 md:space-y-28">

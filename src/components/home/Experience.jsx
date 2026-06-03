@@ -25,7 +25,7 @@ export default function Experience() {
                 {/* HERO SPLIT */}
                 <div className="grid gap-14 xl:grid-cols-[0.9fr_1.1fr] xl:items-center mb-24">
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-                        <p className="text-[#ffc400] text-base font-semibold tracking-[0.45em] uppercase mb-5">The Experience</p>
+                        <p className="text-[#ffc400] text-base font-semibold tracking-[0.45em] uppercase mb-5">The Process</p>
 
                         <div className="w-12 h-px bg-[#ffc400] mb-6" />
 

@@ -11,7 +11,7 @@ export default function ServiceAreasHero() {
             <div className="relative mx-auto max-w-7xl 2xl:max-w-400">
                 <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl xl:max-w-4xl">
                     {/* Label */}
-                    <p className="mb-5 text-base font-semibold uppercase tracking-[0.45em] text-[#ffc400]">Service Areas</p>
+                    <div className="mt-10 h-px w-24 bg-linear-to-r from-[#C9A227] to-transparent" />
 
                     {/* Main headline */}
                     <h1 className="text-4xl font-light leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
@@ -26,7 +26,7 @@ export default function ServiceAreasHero() {
                     </p>
 
                     {/* Subtle divider (luxury feel) */}
-                    <div className="mt-10 h-px w-24 bg-linear-to-r from-[#C9A227] to-transparent" />
+                    <div className="mt-10 h-px w-40 bg-linear-to-r from-[#ffc400] to-transparent" />
                 </motion.div>
             </div>
         </section>

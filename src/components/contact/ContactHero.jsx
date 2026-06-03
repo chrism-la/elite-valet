@@ -42,7 +42,7 @@ export default function ContactHero() {
                     wedding, or private gathering.
                 </motion.p>
 
-                <div className="mt-10 h-px w-24 bg-linear-to-r from-[#ffc400] to-transparent" />
+                <div className="mt-10 h-px w-48 bg-linear-to-r from-[#ffc400] to-transparent" />
             </div>
         </section>
     );
