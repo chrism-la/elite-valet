@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="h-screen w-full relative overflow-hidden flex items-end">
             {/* VIDEO */}
             <motion.div initial={{ opacity: 0, filter: 'blur(14px)' }} animate={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 1.6 }} className="absolute inset-0 w-full h-full">
-                <video ref={videoRef} className="w-full h-full object-cover scale-[1.05]" autoPlay muted={muted} loop playsInline preload="auto" poster="/hero-poster.jpg">
+                <video ref={videoRef} className="w-full h-full object-cover scale-[1.05]" autoPlay muted={muted} loop playsInline preload="metadata" poster="/hero-poster.JPG">
                     <source src="/hero.mp4" type="video/mp4" />
                 </video>
             </motion.div>

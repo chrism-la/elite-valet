@@ -46,7 +46,7 @@ export default function Experience() {
                         <div className="absolute top-8 left-8 z-20 h-px w-16 bg-[#ffc400]" />
 
                         <div className="relative aspect-16/10">
-                            <Image src="/hero-poster.jpg" alt="Elite Valet Experience" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" priority={false} />
+                            <Image src="/hero-poster.JPG" alt="Elite Valet Experience" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" priority={false} />
 
                             <div className="absolute inset-0 bg-linear-to-t from-[#0B0B0F]/70 via-[#0B0B0F]/20 to-transparent" />
                         </div>
