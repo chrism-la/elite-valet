@@ -11,7 +11,7 @@ export default function CTA() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: 0.9, ease: 'easeOut' }}
-                className="relative overflow-hidden mx-auto max-w-7xl 2xl:max-w-400 text-center border border-white/10 bg-white/3 px-6 md:px-12 xl:px-16 py-16 md:py-24 rounded-4xl"
+                className="relative overflow-hidden mx-auto max-w-7xl 2xl:max-w-400 text-center border border-white/10 bg-white/3 px-6 md:px-12 xl:px-16 py-16 md:py-24"
             >
                 {/* Atmosphere */}
                 <div className="pointer-events-none absolute inset-0">
