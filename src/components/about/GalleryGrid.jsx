@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const images = ['beverly-hills-event-1.webp', 'employee-supervisors.webp', 'beverly-hills-team.jpeg', 'cashier-employee.webp', 'manager.jpeg', 'castaway-employees-1.webp'];
+const images = ['supervisors.jpg', 'beverly-hills-team.jpeg', 'beverly-hills-event-1.webp', 'cashier-employee.webp', 'manager.jpeg', 'gwagon.jpg'];
 
 export default function GalleryGrid() {
     return (
@@ -36,7 +36,8 @@ export default function GalleryGrid() {
                                 src={`/Gallery/${src}`}
                                 alt={`Elite Valet gallery image ${index + 1}`}
                                 fill
-                                sizes="(max-width: 768px) 100vw, 33vw"
+                                quality={90}
+                                sizes={index === 2 ? '(max-width: 768px) 100vw, 100vw' : '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'}
                                 className="object-cover transition duration-1000 group-hover:scale-[1.02]"
                             />
 
