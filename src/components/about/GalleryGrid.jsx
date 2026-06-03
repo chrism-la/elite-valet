@@ -8,7 +8,7 @@ const images = ['beverly-hills-event-1.webp', 'manager.jpeg', 'beverly-hills-tea
 export default function GalleryGrid() {
     return (
         <section className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 py-16 md:py-24">
-            <div className="mx-auto max-w-7xl 2xl:max-w-375">
+            <div className="mx-auto max-w-7xl 2xl:max-w-400">
                 <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-5 xl:gap-6">
                     {images.map((src, index) => (
                         <motion.div

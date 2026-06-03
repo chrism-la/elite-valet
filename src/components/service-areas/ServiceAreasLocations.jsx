@@ -80,15 +80,16 @@ export default function ServiceAreasLocations() {
             return () => clearTimeout(timer);
         }
     }, []);
+
     return (
         <section className="px-6 py-20 md:px-12 lg:px-20 xl:px-24 2xl:px-32">
-            <div className="mx-auto max-w-7xl 2xl:max-w-375">
-                <div className="mb-16 max-w-3xl">
-                    <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#C9A227] md:text-sm">Featured Locations</p>
+            <div className="mx-auto max-w-7xl 2xl:max-w-400">
+                <div className="mb-16 max-w-4xl">
+                    <p className="mb-5 text-base font-semibold uppercase tracking-[0.45em] text-[#ffc400]">Featured Locations</p>
 
                     <h2 className="text-3xl font-light tracking-tight md:text-5xl">Local service, tailored to each arrival.</h2>
 
-                    <p className="mt-5 leading-8 text-white/55">
+                    <p className="mt-6 max-w-3xl text-base leading-8 text-white/75 lg:text-lg lg:leading-9">
                         Each area has its own pace, parking challenges, and guest expectations. Our valet service is built to match the setting — not force every location into the same approach.
                     </p>
                 </div>
@@ -108,32 +109,33 @@ export default function ServiceAreasLocations() {
                                 className={`scroll-mt-32 grid items-center gap-10 xl:grid-cols-2 xl:gap-20 ${isReversed ? 'xl:[&>*:first-child]:order-2' : ''}`}
                             >
                                 {/* Image */}
-                                <div className="group relative h-90 overflow-hidden border border-white/10 bg-white/3 md:h-110 xl:h-115">
+                                <div className="group relative h-90 overflow-hidden border border-white/10 bg-white/3 md:h-110 xl:h-120">
                                     <Image
                                         src={location.image}
                                         alt={`${location.name} valet service area`}
                                         fill
-                                        className="object-cover opacity-80 transition duration-1000 group-hover:scale-[1.03] group-hover:opacity-95"
+                                        className="object-cover opacity-85 transition duration-1000 group-hover:scale-[1.03] group-hover:opacity-100"
                                         sizes="(max-width: 1024px) 100vw, 50vw"
                                     />
 
-                                    <div className="absolute inset-0 bg-linear-to-t from-[#0B0B0F]/80 via-[#0B0B0F]/20 to-transparent" />
+                                    <div className="absolute inset-0 bg-linear-to-t from-[#0B0B0F]/85 via-[#0B0B0F]/20 to-transparent" />
 
                                     <div className="absolute bottom-6 left-6 flex items-center gap-3">
-                                        <MapPin className="h-4 w-4 text-[#C9A227]" />
-                                        <span className="text-sm uppercase tracking-[0.25em] text-white/80">{location.name}</span>
+                                        <MapPin className="h-4 w-4 text-[#ffc400]" />
+
+                                        <span className="text-sm font-medium uppercase tracking-[0.25em] text-white/90">{location.name}</span>
                                     </div>
                                 </div>
 
                                 {/* Text */}
                                 <div className="max-w-xl">
-                                    <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#C9A227]">{location.eyebrow}</p>
+                                    <p className="mb-5 text-base font-semibold uppercase tracking-[0.4em] text-[#ffc400]">{location.eyebrow}</p>
 
                                     <h3 className="text-3xl font-light leading-tight tracking-tight text-white md:text-5xl">{location.title}</h3>
 
-                                    <p className="mt-6 leading-8 text-white/55">{location.text}</p>
+                                    <p className="mt-6 text-base leading-8 text-white/75 lg:text-lg lg:leading-9">{location.text}</p>
 
-                                    <div className="mt-8 h-px w-20 bg-linear-to-r from-[#C9A227] to-transparent" />
+                                    <div className="mt-8 h-px w-24 bg-linear-to-r from-[#ffc400] to-transparent" />
                                 </div>
                             </motion.article>
                         );
