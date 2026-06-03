@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const images = ['beverly-hills-event-1.webp', 'manager.jpeg', 'beverly-hills-team.jpeg', 'employee-supervisors.webp', 'cashier-employee.webp', 'castaway-employees-1.webp'];
+const images = ['beverly-hills-event-1.webp', 'employee-supervisors.webp', 'beverly-hills-team.jpeg', 'cashier-employee.webp', 'manager.jpeg', 'castaway-employees-1.webp'];
 
 export default function GalleryGrid() {
     return (

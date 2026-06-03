@@ -86,7 +86,7 @@ export default function Services() {
 
                                 {/* Content */}
                                 <div className="relative z-10 transition-all duration-700 ease-out group-hover:translate-y-1">
-                                    <h3 className="text-white text-2xl font-light mb-5 transition-colors duration-500 group-hover:text-[#ffc400]">{service.title}</h3>
+                                    <h3 className="text-white text-2xl font-semibold mb-5 transition-colors duration-500 group-hover:text-[#ffc400]">{service.title}</h3>
 
                                     <p className="text-white/85 text-lg leading-8 max-w-sm">{service.text}</p>
                                 </div>

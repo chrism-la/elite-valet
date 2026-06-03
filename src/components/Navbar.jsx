@@ -28,7 +28,7 @@ export default function Navbar() {
         return pathname.startsWith(href);
     };
 
-    const navLinkClass = (href) => `relative tracking-[0.08em] text-base xl:text-[22px] transition duration-300 ${isActive(href) ? 'text-[#C9A227]' : 'text-white/85 hover:text-[#C9A227]'}`;
+    const navLinkClass = (href) => `relative tracking-[0.08em] text-base xl:text-[20px] transition duration-300 ${isActive(href) ? 'text-[#C9A227]' : 'text-white/85 hover:text-[#C9A227]'}`;
 
     return (
         <div className="fixed top-0 w-full z-50">
@@ -46,6 +46,9 @@ export default function Navbar() {
                 </Link>
 
                 <div className="hidden md:flex items-center gap-12 xl:gap-16">
+                    <Link href="/" className={navLinkClass('/')}>
+                        Home
+                    </Link>
                     <Link href="/about" className={navLinkClass('/about')}>
                         About
                     </Link>
@@ -117,14 +120,19 @@ export default function Navbar() {
 
                             <div className="mt-24 flex flex-col gap-6">
                                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
-                                    <Link href="/about" onClick={() => setOpen(false)} className={`text-2xl font-semibold ${isActive('/about') ? 'text-[#C9A227]' : 'text-white'}`}>
+                                    <Link href="/" onClick={() => setOpen(false)} className={`text-2xl ${isActive('/') ? 'text-[#C9A227]' : 'text-white'}`}>
+                                        Home
+                                    </Link>
+                                </motion.div>
+                                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }}>
+                                    <Link href="/about" onClick={() => setOpen(false)} className={`text-2xl ${isActive('/about') ? 'text-[#C9A227]' : 'text-white'}`}>
                                         About
                                     </Link>
                                 </motion.div>
 
                                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
                                     <div className="flex items-center justify-between">
-                                        <Link href="/service-areas" onClick={() => setOpen(false)} className={`text-2xl font-semibold ${isActive('/service-areas') ? 'text-[#C9A227]' : 'text-white'}`}>
+                                        <Link href="/service-areas" onClick={() => setOpen(false)} className={`text-2xl ${isActive('/service-areas') ? 'text-[#C9A227]' : 'text-white'}`}>
                                             Service Areas
                                         </Link>
 
@@ -152,18 +160,18 @@ export default function Navbar() {
                                 </motion.div>
 
                                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
-                                    <Link href="/contact" onClick={() => setOpen(false)} className={`text-2xl font-semibold ${isActive('/contact') ? 'text-[#C9A227]' : 'text-white'}`}>
+                                    <Link href="/contact" onClick={() => setOpen(false)} className={`text-2xl ${isActive('/contact') ? 'text-[#C9A227]' : 'text-white'}`}>
                                         Contact
                                     </Link>
                                 </motion.div>
                             </div>
 
                             <div className="mt-8 flex gap-5">
-                                <a href="#" className="text-white/50 hover:text-[#C9A227] transition">
+                                <a href="https://www.instagram.com/officialeliteparking/" className="text-white/50 hover:text-[#C9A227] transition">
                                     <FaInstagram className="w-8 h-8" />
                                 </a>
 
-                                <a href="#" className="text-white/50 hover:text-[#C9A227] transition">
+                                <a href="https://www.linkedin.com/company/elite-car-valet-llc/" className="text-white/50 hover:text-[#C9A227] transition">
                                     <FaLinkedin className="w-8 h-8" />
                                 </a>
                             </div>
