@@ -21,7 +21,7 @@ export default function AboutHero() {
             </motion.div>
 
             {/* OVERLAYS */}
-            <div className="absolute inset-0 bg-black/65" />
+            <div className="absolute inset-0 bg-black/45" />
             <div className="absolute inset-0 bg-linear-to-b from-black/35 via-black/60 to-[#0B0B0F]" />
             <div className="absolute inset-0 bg-linear-to-r from-[#0B0B0F]/35 via-transparent to-[#0B0B0F]/35" />
 

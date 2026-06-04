@@ -54,11 +54,11 @@ export default function ServiceAreasHighlights() {
                                     duration: 0.55,
                                     delay: index * 0.08,
                                 }}
-                                className="group relative overflow-hidden border border-white/10 bg-white/3 p-7 xl:p-8 transition-all duration-700 hover:border-[#ffc400]/30"
+                                className="group relative overflow-hidden border border-white/10 bg-white/3 p-7 xl:p-8 transition-all duration-700 hover:border-[#ffc400]/50"
                             >
                                 {/* Glow */}
                                 <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
-                                    <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-[#ffc400]/12 blur-3xl translate-x-1/3 -translate-y-1/3" />
+                                    <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-[#ffc400]/50 blur-3xl translate-x-1/3 -translate-y-1/3" />
                                 </div>
 
                                 {/* Icon */}

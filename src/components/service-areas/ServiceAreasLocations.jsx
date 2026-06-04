@@ -83,7 +83,7 @@ export default function ServiceAreasLocations() {
 
     return (
         <section className="px-6 py-20 md:px-12 lg:px-20 xl:px-24 2xl:px-32">
-            <div className="mx-auto max-w-7xl 2xl:max-w-400">
+            <div className="mx-auto max-w-7xl 2xl:max-w-450">
                 <div className="mb-16 max-w-4xl">
                     <p className="mb-5 text-base font-semibold uppercase tracking-[0.45em] text-[#ffc400]">Featured Locations</p>
 
