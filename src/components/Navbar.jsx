@@ -15,12 +15,12 @@ export default function Navbar() {
 
     const serviceAreas = [
         { name: 'Beverly Hills', href: '/service-areas#beverly-hills' },
-        { name: 'Studio City', href: '/service-areas#studio-city' },
-        { name: 'West Hollywood', href: '/service-areas#west-hollywood' },
         { name: 'Sunset Plaza', href: '/service-areas#sunset-plaza' },
         { name: 'Burbank', href: '/service-areas#burbank' },
-        { name: 'Pasadena', href: '/service-areas#pasadena' },
         { name: 'Glendale', href: '/service-areas#glendale' },
+        { name: 'Pasadena', href: '/service-areas#pasadena' },
+        { name: 'Studio City', href: '/service-areas#studio-city' },
+        { name: 'West Hollywood', href: '/service-areas#west-hollywood' },
     ];
 
     const isActive = (href) => {

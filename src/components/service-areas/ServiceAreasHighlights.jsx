@@ -1,26 +1,26 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building2, GlassWater, Hotel, UsersRound } from 'lucide-react';
+import { FaCrown, FaHotel, FaAward, FaBuildingColumns } from 'react-icons/fa6';
 
 const highlights = [
     {
-        icon: Building2,
+        icon: FaAward,
         title: 'Private Properties',
         text: 'Discreet valet support for private residences, estates, and invite-only gatherings where presentation and trust matter.',
     },
     {
-        icon: Hotel,
+        icon: FaHotel,
         title: 'Hospitality Venues',
         text: 'Professional parking service for restaurants, hotels, lounges, and venues that need a polished guest arrival.',
     },
     {
-        icon: GlassWater,
+        icon: FaCrown,
         title: 'Luxury Events',
         text: 'Valet coordination for weddings, galas, fundraisers, celebrations, and high-end social events across Los Angeles.',
     },
     {
-        icon: UsersRound,
+        icon: FaBuildingColumns,
         title: 'Corporate Functions',
         text: 'Organized arrival and departure support for business events, company gatherings, studios, offices, and private venues.',
     },
@@ -62,7 +62,17 @@ export default function ServiceAreasHighlights() {
                                 </div>
 
                                 {/* Icon */}
-                                <Icon className="relative z-10 mb-8 h-8 w-8 text-[#ffc400] opacity-90 transition-all duration-500 group-hover:scale-110 group-hover:opacity-100" />
+                                <Icon
+                                    className="
+        relative z-10
+        mb-8
+        h-8 w-8
+        text-[#ffc400]
+        drop-shadow-[0_0_10px_rgba(255,196,0,0.18)]
+        transition-all duration-500
+        group-hover:scale-110
+    "
+                                />
 
                                 {/* Title */}
                                 <h3 className="relative z-10 text-2xl font-light text-white transition-colors duration-500 group-hover:text-[#ffc400]">{item.title}</h3>
