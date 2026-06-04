@@ -17,7 +17,7 @@ export default function AboutHero() {
                 transition={{ duration: 1.6, ease: 'easeOut' }}
                 className="absolute inset-0 h-full w-full"
             >
-                <Image src="/hero-poster.JPG" alt="Elite Valet arrival experience" fill priority className="object-cover scale-[1.04]" />
+                <Image src="/hero-poster.JPG" alt="Elite Valet arrival experience" fill priority sizes="100vw" className="object-cover scale-[1.04]" />
             </motion.div>
 
             {/* OVERLAYS */}

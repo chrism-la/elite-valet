@@ -14,7 +14,7 @@ export async function POST(request) {
 
         const { data, error } = await resend.emails.send({
             from: 'Elite Valet Website <onboarding@resend.dev>',
-            to: ['info@elitecarvalet.com'],
+            to: ['chrismorales.la@gmail.com'],
             replyTo: email,
             subject: `New valet request from ${name}`,
             html: `

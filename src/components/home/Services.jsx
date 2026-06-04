@@ -52,7 +52,7 @@ export default function Services() {
     const cardsOpacity = useTransform(scrollYProgress, [0.15, 0.45], [0, 1]);
 
     return (
-        <section ref={sectionRef} className="bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 pt-20 pb-12 md:pt-28 md:pb-16">
+        <section ref={sectionRef} className="relative bg-[#0B0B0F] px-6 md:px-16 lg:px-24 2xl:px-32 pt-20 pb-12 md:pt-28 md:pb-16">
             <div className="mx-auto max-w-7xl 2xl:max-w-400">
                 <motion.div style={{ y: headerY, opacity: headerOpacity, scale: headerScale }} className="mb-12 md:mb-16 grid gap-10 xl:grid-cols-[1.15fr_0.85fr] xl:items-end">
                     <div className="max-w-4xl">
