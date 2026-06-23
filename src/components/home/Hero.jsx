@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useRef } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
-import Image from 'next/image';
 
 export default function Hero() {
     const { scrollY } = useScroll();
@@ -30,8 +29,6 @@ export default function Hero() {
         <div className="relative h-screen w-full overflow-hidden flex items-end">
             {/* VIDEO */}
             <motion.div className="absolute inset-0 h-full w-full">
-                <Image src="/hero-poster.JPG" alt="Elite Valet" fill priority sizes="100vw" className="object-cover scale-[1.05]" />
-
                 <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover scale-[1.05]" autoPlay muted loop playsInline preload="auto" poster="/hero-poster.JPG">
                     <source src="/hero.mp4" type="video/mp4" />
                 </video>

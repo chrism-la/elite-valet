@@ -10,20 +10,24 @@ export default function AboutHero() {
 
     return (
         <section className="relative h-[85vh] min-h-155 w-full overflow-hidden flex items-center justify-center text-center px-6 md:px-16 lg:px-24 2xl:px-32">
-            {/* IMAGE */}
+            {/* VIDEO / POSTER */}
             <motion.div
                 initial={{ opacity: 0, filter: 'blur(14px)' }}
                 animate={{ opacity: 1, filter: 'blur(0px)' }}
                 transition={{ duration: 1.6, ease: 'easeOut' }}
                 className="absolute inset-0 h-full w-full"
             >
-                <Image src="/hero-poster.JPG" alt="Elite Valet arrival experience" fill priority sizes="100vw" className="object-cover scale-[1.04]" />
+                <video className="h-full w-full object-cover object-center scale-[1.04]" autoPlay muted loop playsInline preload="metadata" poster="/hero-poster.JPG">
+                    <source src="/about-hero.mp4" type="video/mp4" />
+                </video>
             </motion.div>
 
             {/* OVERLAYS */}
-            <div className="absolute inset-0 bg-black/45" />
-            <div className="absolute inset-0 bg-linear-to-b from-black/35 via-black/60 to-[#0B0B0F]" />
-            <div className="absolute inset-0 bg-linear-to-r from-[#0B0B0F]/35 via-transparent to-[#0B0B0F]/35" />
+            <div className="absolute inset-0 bg-black/25" />
+
+            <div className="absolute inset-0 bg-linear-to-b from-black/15 via-black/40 to-[#0B0B0F]" />
+
+            <div className="absolute inset-0 bg-linear-to-r from-[#0B0B0F]/20 via-transparent to-[#0B0B0F]/20" />
 
             {/* TEXT */}
             <motion.div style={{ y: textY, opacity: textOpacity }} className="relative z-10 max-w-6xl">
@@ -47,15 +51,6 @@ export default function AboutHero() {
                         .
                     </motion.span>
                 </motion.h1>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 18 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.85, duration: 0.8, ease: 'easeOut' }}
-                    className="mt-8 text-white/75 text-lg leading-8 md:text-xl md:leading-9 max-w-2xl mx-auto"
-                >
-                    Every arrival is structured and executed to reflect the standard of your event.
-                </motion.p>
             </motion.div>
         </section>
     );
